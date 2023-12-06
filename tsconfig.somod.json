@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "allowUmdGlobalAccess": true,
+    "outDir": "build",
+    "declaration": true,
+    "target": "ES5",
+    "module": "ESNext",
+    "rootDir": "./",
+    "lib": ["ESNext"],
+    "moduleResolution": "Node",
+    "esModuleInterop": true,
+    "importHelpers": true,
+    "skipLibCheck": true,
+    "jsx": "react-jsx",
+    "resolveJsonModule": true
+  },
+  "include": ["lib", "serverless"],
+  "exclude": []
+}

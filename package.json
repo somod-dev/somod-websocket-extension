@@ -1,0 +1,66 @@
+{
+  "name": "somod-websocket-extension",
+  "version": "0.0.0",
+  "description": "SOMOD middleware to intercept and validate Lambda event for AWS Websocket APIGateway",
+  "scripts": {
+    "prettier": "npx prettier --check --ignore-unknown --no-error-on-unmatched-pattern ./**/*",
+    "eslint": "npx eslint ./ --no-error-on-unmatched-pattern",
+    "prebuild": "npm run prettier && npm run eslint",
+    "build": "npx somod build",
+    "pretest": "npm run build",
+    "test": "echo 'no tests so far'",
+    "prepack": "npm run test",
+    "postversion": "git push --follow-tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/somod-dev/somod-websocket-extension.git"
+  },
+  "keywords": [
+    "somod",
+    "lambda",
+    "api-gateway",
+    "aws",
+    "serverless",
+    "websocket"
+  ],
+  "author": "Raghavendra K R <raghavendra@sodaru.com>",
+  "contributors": [
+    "Raghavendra K R <raghavendra@sodaru.com>",
+    "Lokesh G C <lokesh@sodaru.com>",
+    "Sukhesh M G <sukhesh@sodaru.com>"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/somod-dev/somod-websocket-extension/issues"
+  },
+  "homepage": "https://github.com/somod-dev/somod-websocket-extension#readme",
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.115",
+    "@types/node": "^18.11.9",
+    "@types/ajv": "^1.0.0",
+    "eslint-config-sodaru": "^1.0.1",
+    "prettier-config-sodaru": "^1.0.0",
+    "somod": "^1.17.2",
+    "somod-middleware": "^1.17.2"
+  },
+  "module": "build/lib/index.js",
+  "typings": "build/lib/index.d.ts",
+  "files": [
+    "build"
+  ],
+  "sideEffects": false,
+  "somod": "1.17.3",
+  "dependencies": {
+    "ajv": "^8.12.0",
+    "chalk": "^5.3.0",
+    "decorated-ajv": "^1.1.0",
+    "nodejs-file-utils": "^1.0.2"
+  },
+  "eslintConfig": {
+    "extends": [
+      "sodaru"
+    ]
+  },
+  "prettier": "prettier-config-sodaru"
+}

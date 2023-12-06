@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "https://somod-websocket-extension.json-schemas.somod.dev/websockets-routes.json",
+  "title": "JSON Schema for rotues configuration",
+  "type": "object",
+  "additionalProperties": false,
+  "patternProperties": {
+    "^.*$": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["body"],
+      "properties": {
+        "body": {
+          "type": "object",
+          "required": ["schema"],
+          "properties": {
+            "parser": { "enum": ["text", "json", "formdata"] },
+            "schema": { "$ref": "http://json-schema.org/draft-07/schema" }
+          }
+        }
+      }
+    }
+  }
+}

@@ -3,7 +3,7 @@
     "allowUmdGlobalAccess": true,
     "outDir": "build",
     "declaration": true,
-    "target": "ES5",
+    "target": "es2022",
     "module": "ESNext",
     "rootDir": "./",
     "lib": ["ESNext"],

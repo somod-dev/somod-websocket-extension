@@ -42,7 +42,8 @@
     "eslint-config-sodaru": "^1.0.1",
     "prettier-config-sodaru": "^1.0.0",
     "somod": "^2.0.1",
-    "somod-middleware": "^2.0.1"
+    "somod-middleware": "^2.0.1",
+    "decorated-ajv": "^1.1.0"
   },
   "module": "build/lib/index.js",
   "typings": "build/lib/index.d.ts",

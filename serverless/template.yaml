@@ -1,6 +1,15 @@
 # yaml-language-server: $schema=../node_modules/somod-schema/schemas/serverless-template/index.json
 
 Resources:
+  AjvLayer:
+    Type: AWS::Serverless::LayerVersion
+    Properties:
+      RetentionPolicy: Delete
+      ContentUri:
+        SOMOD::FunctionLayer:
+          name: ajvLayer
+          libraries:
+            - decorated-ajv
   SomodWebSocketMiddleware:
     Type: SOMOD::Serverless::FunctionMiddleware
     SOMOD::Access: public
@@ -10,3 +19,6 @@ Resources:
           name: websocketMiddleware
           allowedTypes:
             - WebSocket
+      Layers:
+        - SOMOD::Ref:
+            resource: AjvLayer

@@ -1,6 +1,6 @@
 {
   "name": "somod-websocket-extension",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "SOMOD middleware to intercept and validate Lambda event for AWS Websocket APIGateway",
   "scripts": {
     "prettier": "npx prettier --check --ignore-unknown --no-error-on-unmatched-pattern ./**/*",
